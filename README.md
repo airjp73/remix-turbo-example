@@ -2,12 +2,20 @@
 
 Example of setting up a Remix app that will be deployed to vercel from inside a Turborepo monorepo.
 
+## Preview
+
+Open this example on [CodeSandbox](https://codesandbox.com):
+
+<!-- TODO: update this link to the path for your example: -->
+
+[![Open in codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/remix-run/remix/tree/main/examples/turbo-vercel)
+
+## Example
+
 What makes this different from deploying a normal remix app to Vercel,
 is that Vercel doesn't include files from the root `node_modules` when deploying the app.
 In order to work around this, we take the server build output from `remix` and
 bundle it using `rollup` so that all the necessary dependencies are present when deployed.
-
-# Vercel config
 
 In order for this to work, your Vercel config should look like this:
 
